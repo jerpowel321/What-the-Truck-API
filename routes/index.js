@@ -34,7 +34,7 @@ module.exports = function(app) {
       // image: req.body.image,
       name: req.body.name,
       cuisine: req.body.cuisine,
-      phone: req.body.cuisine,
+      phone: req.body.phone,
       // check to see if we will create a new table
       // menu: req.body.menu,
     }).then(function (dbTrucks){
