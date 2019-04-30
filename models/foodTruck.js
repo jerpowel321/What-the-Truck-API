@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             allowNull: false,
             // confirm if we want to limit to only integer and look into methods for getting phone numbers
-            validate: [9,10]
+            // validate: [9,10]
         },
         // look to see if we can add an array/object into model
         // menu:{
