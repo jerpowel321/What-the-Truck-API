@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Trucks = sequelize.define("trucks", {
+    var Trucks = sequelize.define("Trucks", {
         // image: {
         //     type: DataTypes.String,
         //     allowNull: true
@@ -7,12 +7,12 @@ module.exports = function(sequelize, DataTypes) {
         name:{
             type: DataTypes.STRING,
             allowNull: false,
-            validate: [1,100],
+            // validate: [1,100],
         },
         cuisine: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: [1,100]
+            // validate: [1,100]
         },
         phone: {
             type: DataTypes.INTEGER,
@@ -35,22 +35,7 @@ module.exports = function(sequelize, DataTypes) {
 
     });
 
-    var Food = sequelize.define("food",{
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        description: {
-            type: DataTypes.STRING,
-            max: 200
-        },
-        price: {
-            type: DataTypes.INTEGER,
-            isDecimal: true,
-        }
-
-    })
     // thinking we need to create another table for menu and join via name
     // one(truck) to many(food) relationship 
-    return Trucks, Food;
+    return Trucks;
 }
