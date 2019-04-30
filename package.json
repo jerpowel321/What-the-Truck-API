@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/ctghadiri/What-the-Truck-API/issues"
   },
-  "homepage": "https://github.com/ctghadiri/What-the-Truck-API#readme"
+  "homepage": "https://github.com/ctghadiri/What-the-Truck-API#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.8.1"
+  }
 }
