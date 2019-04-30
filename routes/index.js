@@ -5,6 +5,10 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
+  app.get("/", function (req, res) {
+    res.send("Welcome to the food trucks API!");
+  });
+
   // --------------- Cyrus Routes ------------------------------
   // look into dbTrucks if it needs to be linked to schema.sql db
   // gets all the trucks: see if we should specify an area for the trucks
