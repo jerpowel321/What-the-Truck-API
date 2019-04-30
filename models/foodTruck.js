@@ -26,7 +26,7 @@ module.exports = function(sequelize, DataTypes) {
         // },
         approved: {
             type: DataTypes.BOOLEAN,
-            // default: false
+            default: false
         },
         applicationOpen: {
             type: DataTypes.BOOLEAN,

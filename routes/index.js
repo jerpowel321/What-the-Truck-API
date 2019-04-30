@@ -31,13 +31,12 @@ module.exports = function(app) {
   // add new truck
   app.post("/api/trucks", function(req, res){
     db.Trucks.create({
-      image: req.body.image,
+      // image: req.body.image,
       name: req.body.name,
       cuisine: req.body.cuisine,
       phone: req.body.cuisine,
       // check to see if we will create a new table
-      menu: req.body.menu,
-      authenticated: false
+      // menu: req.body.menu,
     }).then(function (dbTrucks){
       res.json(dbTrucks)
     })
