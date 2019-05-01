@@ -6,6 +6,7 @@ var db = require("../models");
 module.exports = function(app) {
 
   app.get("/", function (req, res) {
+    console.log("DATABASE: ", db)
     res.send("Welcome to the food trucks API!");
   });
 
@@ -30,13 +31,23 @@ module.exports = function(app) {
 
   // add new truck
   app.post("/api/trucks", function(req, res){
+
+    console.log("REQ BODY: ", req.body.name, req.body.cuisine, req.body.phone);
+
     db.Trucks.create({
-      // image: req.body.image,
-      name: req.body.name,
+      businessName: req.body.name,
+      website: req.body.website,
       cuisine: req.body.cuisine,
+      menu: req.body.menu,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
       phone: req.body.phone,
-      // check to see if we will create a new table
-      // menu: req.body.menu,
+      address: req.body.address,
+      address2: req.body.address2,
+      city: req.body.city,
+      state: req.body.state,
+      zip: req.body.zip
     }).then(function (dbTrucks){
       res.json(dbTrucks)
     })
