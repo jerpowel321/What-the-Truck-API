@@ -1,29 +1,83 @@
 module.exports = function(sequelize, DataTypes) {
     var Trucks = sequelize.define("Trucks", {
-        // image: {
-        //     type: DataTypes.String,
-        //     allowNull: true
-        // },
-        name:{
+        businessName:{
             type: DataTypes.STRING,
             allowNull: false,
-            // validate: [1,100],
+            validate: {
+                len: [1,100]
+            },
+        },
+        website: {
+            type: DataTypes.STRING,
+            validate: {
+                isURL: true,
+            }
         },
         cuisine: {
             type: DataTypes.STRING,
             allowNull: false,
-            // validate: [1,100]
+            validate: {
+                len: [1,100]
+            }
+        },
+        menu:{
+            type: DataTypes.String,
+            validate: {
+                isURL: true,
+            }        
+        },
+        firstName: {
+            type: DataTypes.STRING,
+            validate: {
+                allowNull: false,
+            }
+        },
+        lastName: {
+            type: DataTypes.STRING,
+            validate: {
+                allowNull: false,
+            }
+        },
+        email: {
+            type: DataTypes.STRING,
+            validate: {
+                isEmail: true,
+            }
         },
         phone: {
             type: DataTypes.INTEGER,
-            allowNull: false,
-            // confirm if we want to limit to only integer and look into methods for getting phone numbers
+            validate: {
+                allowNull: false,
+            }            // confirm if we want to limit to only integer and look into methods for getting phone numbers
             // validate: [9,10]
         },
-        // look to see if we can add an array/object into model
-        // menu:{
-        //     type: DataTypes.String
-        // },
+        address: {
+            type: DataTypes.INTEGER,
+            validate: {
+                allowNull: false,
+            }
+        },
+        address2: {
+            type: DataTypes.INTEGER,
+        },
+        city:{
+            type: DataTypes.INTEGER,
+            validate: {
+                allowNull: false,
+            }
+        },
+        state: {
+            type: DataTypes.INTEGER,
+            validate: {
+                allowNull: false,
+            }
+        },
+        zip: {
+            type: DataTypes.INTEGER,
+            validate: {
+                allowNull: false,
+            }
+        },
         approved: {
             type: DataTypes.BOOLEAN,
             default: false
