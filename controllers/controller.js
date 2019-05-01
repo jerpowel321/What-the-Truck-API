@@ -3,8 +3,9 @@ const db = require("./../models");
 module.exports = {
     // create new truck
     createTruck: function (req,res) {
+        console.log("I love spongebob")
         db.Trucks.create({
-            businessName: req.body.companyName,
+            businessName: req.body.businessName,
             website: req.body.website,
             cuisine: req.body.cuisine,
             menu: req.body.menu,
