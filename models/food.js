@@ -8,7 +8,7 @@ module.exports = function (sequelize, DataTypes) {
         },
         description: {
             type: DataTypes.STRING,
-            max: 200
+            validate: {len: [1,200]}
         },
         price: {
             type: DataTypes.INTEGER,
