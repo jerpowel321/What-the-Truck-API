@@ -2,84 +2,62 @@ module.exports = function(sequelize, DataTypes) {
     var Trucks = sequelize.define("Trucks", {
         businessName:{
             type: DataTypes.STRING,
+            allowNull: false,
             validate: {
-                notNull: true,
                 len: [1,100]
             }
         },
         website: {
             type: DataTypes.STRING,
-            validate: {
-                isURL: true
-            }
+            validate: {isURL: true}
         },
         cuisine: {
             type: DataTypes.STRING,
-            validate: {
-                notNull: true,
-                len: [1,100]
-            }
+            allowNull: false,
+            validate: {len: [1,100]}
         },
         menu:{
             type: DataTypes.STRING,
-            validate: {
-                isURL: true
-            }
+            validate: {isURL: true}
         },
         firstName: {
             type: DataTypes.STRING,
-            validate: {
-                notNull: true
-            }
+            allowNull: false,
         },
         middleInitial: {
             type: DataTypes.STRING,
         },
         lastName: {
             type: DataTypes.STRING,
-            validate: {
-                notNull: true
-            }
+            allowNull: false,
         },
         email: {
             type: DataTypes.STRING,
-            validate: {
-                isEmail: true
-            },
+            validate: {isEmail: true},
         },
         phone: {
             type: DataTypes.INTEGER,
-            validate: {
-                notNull: true,
-                len: [9,10]
-            }
+            allowNull: false,
+            validate: {len: [9,10]}
         },
         address: {
             type: DataTypes.INTEGER,
-            validate: {
-                notNull: true
-            }
+            allowNull: false,
         },
         address2: {
             type: DataTypes.INTEGER,
         },
         city:{
             type: DataTypes.INTEGER,
-            validate: {
-                notNull: true
-            }
+            allowNull: false,
         },
         state: {
             type: DataTypes.INTEGER,
-            validate: {
-                notNull: true
-            }
+            allowNull: false,
         },
         zip: {
             type: DataTypes.INTEGER,
-            validate: {
-                notNull: true
-            }
+            allowNull: false,
         },
         approved: {
             type: DataTypes.BOOLEAN,
