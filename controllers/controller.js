@@ -1,27 +1,76 @@
-// var test = {
-//     "development": {
-//       "username": "root",
-//       "password": "password",
-//       "database": "todolist",
-//       "host": "127.0.0.1",
-//       "port": 3306,
-//       "dialect": "mysql"
-//     },
-//     "test": {
-//       "username": "root",
-//       "password": null,
-//       "database": "database_test",
-//       "host": "127.0.0.1",
-//       "port": 3306,
-//       "dialect": "mysql"
-//     },
-//     "production": {
-//       "username": "root",
-//       "password": null,
-//       "database": "database_production",
-//       "host": "127.0.0.1",
-//       "port": 3306,
-//       "dialect": "mysql"
-//     }
-//   }
+const db = require("./../models");
+
+module.exports = {
+    // create new truck
+    createTruck: function (req,res) {
+        db.Trucks.create({
+            businessName: req.body.name,
+            website: req.body.website,
+            cuisine: req.body.cuisine,
+            menu: req.body.menu,
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            phone: req.body.phone,
+            address: req.body.address,
+            address2: req.body.address2,
+            city: req.body.city,
+            state: req.body.state,
+            zip: req.body.zip
+        })
+        .then(function (dbTrucks){
+            res.json(dbTrucks)
+        })
+        .catch(function(err){
+            res.json(err)
+        });
+    },
+    // find all trucks
+    findAllTrucks: function (req,res) {
+        db.Trucks.findAll({})
+        .then(function(dbTrucks){
+            res.json(dbTrucks)
+        });
+    },
+    // find specified truck
+    findOneTruck: function(req, res){
+        db.Trucks.findOne({
+            where: {
+                is:req.params.id
+            }
+        }).then(function(dbTrucks){
+            res.json(dbTrucks)
+        })
+    },
+    // find all trucks with an open application
+    truckApplicationOpen: function(req, res){
+        db.Trucks.findAll({
+            where: {
+                approved: true
+            }
+        }).then(function(dbTrucks){
+            res.json(dbTrucks)
+        })
+    },
+    // find all trucks that are approved
+    truckApplicationsApproved:function (req,res){
+        db.Trucks.findAll({
+            where: {
+                approved: true
+            }
+        }).then(function(result){
+            res.json(result)
+        })
+    },
+    // find all trucks with applications that are denied
+    truckApplicationsDenied:function (req,res){
+        db.Trucks.findAll({
+            where: {
+                approved: false
+            }
+        }).then(function(result){
+            res.json(result)
+        })
+    }
+}
   
