@@ -21,7 +21,7 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
         menu:{
-            type: DataTypes.String,
+            type: DataTypes.STRING,
             validate: {
                 isURL: true,
             }        
@@ -31,6 +31,9 @@ module.exports = function(sequelize, DataTypes) {
             validate: {
                 allowNull: false,
             }
+        },
+        middleInitial: {
+            type: DataTypes.STRING,
         },
         lastName: {
             type: DataTypes.STRING,
