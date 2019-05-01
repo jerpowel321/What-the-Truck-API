@@ -4,11 +4,12 @@ module.exports = {
     // create new truck
     createTruck: function (req,res) {
         db.Trucks.create({
-            businessName: req.body.name,
+            businessName: req.body.companyName,
             website: req.body.website,
             cuisine: req.body.cuisine,
             menu: req.body.menu,
             firstName: req.body.firstName,
+            middleInitial: req.body.middleInitial,
             lastName: req.body.lastName,
             email: req.body.email,
             phone: req.body.phone,
@@ -36,7 +37,7 @@ module.exports = {
     findOneTruck: function(req, res){
         db.Trucks.findOne({
             where: {
-                is:req.params.id
+                id:req.params.id
             }
         }).then(function(dbTrucks){
             res.json(dbTrucks)
@@ -46,7 +47,7 @@ module.exports = {
     truckApplicationOpen: function(req, res){
         db.Trucks.findAll({
             where: {
-                approved: true
+                applicationsOpen: true
             }
         }).then(function(dbTrucks){
             res.json(dbTrucks)
