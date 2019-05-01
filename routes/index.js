@@ -1,5 +1,6 @@
 // Requiring our models
 var controller = require("../controllers/controller");
+var db = require("..models/")
 
 // Routes
 // =============================================================
