@@ -3,9 +3,7 @@ module.exports = function(sequelize, DataTypes) {
         businessName:{
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                len: [1,100]
-            }
+            validate: {len: [1,100]}
         },
         website: {
             type: DataTypes.STRING,
@@ -70,7 +68,5 @@ module.exports = function(sequelize, DataTypes) {
 
     });
 
-    // thinking we need to create another table for menu and join via name
-    // one(truck) to many(food) relationship 
     return Trucks;
 }
