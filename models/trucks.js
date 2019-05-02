@@ -60,11 +60,11 @@ module.exports = function(sequelize, DataTypes) {
         },
         approved: {
             type: DataTypes.BOOLEAN,
-            default: false
+            defaultValue: false
         },
         applicationOpen: {
             type: DataTypes.BOOLEAN,
-            default: true
+            defaultValue: true
         },
 
     });
