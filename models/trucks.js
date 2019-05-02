@@ -1,6 +1,7 @@
+
 module.exports = function(sequelize, DataTypes) {
     var Trucks = sequelize.define("Trucks", {
-        businessName:{
+        businessName: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {len: [1,100]}
@@ -39,18 +40,18 @@ module.exports = function(sequelize, DataTypes) {
             validate: {len: [9,10]}
         },
         address: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         address2: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
         },
         city:{
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         state: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         zip: {
