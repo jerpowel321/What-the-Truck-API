@@ -11,6 +11,8 @@ module.exports = function(app) {
     res.send("Welcome to the food trucks API!");
   });
 
+  app.put("/api/trucks/:id", controller.updateTruck)
+
   // --------------- Cyrus Routes ------------------------------
   // look into dbTrucks if it needs to be linked to schema.sql db
   // gets all the trucks: see if we should specify an area for the trucks
