@@ -60,8 +60,8 @@ module.exports = {
             where: {
                 approved: true
             }
-        }).then(function(result){
-            res.json(result)
+        }).then(function(dbTrucks){
+            res.json(dbTrucks)
         })
     },
     // find all trucks with applications that are denied
@@ -70,9 +70,24 @@ module.exports = {
             where: {
                 approved: false
             }
-        }).then(function(result){
-            res.json(result)
+        }).then(function(dbTrucks){
+            res.json(dbTrucks)
         })
+    },
+    // update info for 
+    updateTruck: function (req, res){
+        db.Trucks.update(req.body, {
+            approved: req.body.approved,
+            applicationOpen: req.body.applicationOpen
+        }, 
+        {
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(function(dbTrucks){
+            res.json(dbTrucks)
+        });
     }
 }
   
