@@ -9,6 +9,7 @@ var db = require("./models");
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("public"));
 
 // Add routes, both API and view
 // app.use(routes);

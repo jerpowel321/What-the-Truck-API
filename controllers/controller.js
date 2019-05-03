@@ -76,7 +76,8 @@ module.exports = {
     },
     // update info for 
     updateTruck: function (req, res){
-        db.Trucks.update(req.body, {
+        db.Trucks.update( {
+            
             approved: req.body.approved,
             applicationOpen: req.body.applicationOpen
         }, 
