@@ -35,17 +35,17 @@ module.exports = function(app) {
 
   // find all trucks with an open application
 
-  app.get("/api/applications/open", controller.truckApplicationOpen)
+  app.get("/api/trucks/open", controller.truckApplicationOpen)
 
 
   // find all trucks that are approved
 
-  app.get("/applications/approved", controller.truckApplicationsApproved)
+  app.get("/api/trucks/approved", controller.truckApplicationsApproved)
 
 
   // find all trucks with applications that are denied
 
-  app.get("/api/applications/denied", controller.truckApplicationsDenied)
+  app.get("/api/trucks/denied", controller.truckApplicationsDenied)
 
 
   // find truck via email
