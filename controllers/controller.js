@@ -38,10 +38,6 @@ module.exports = {
         });
     },
 
-    findAllTrucks: {
-
-    },
-
     // find specified truck
     findOneTruck: function(req, res){
         db.Trucks.findOne({
@@ -59,7 +55,7 @@ module.exports = {
     truckApplicationOpen: function(req, res){
         db.Trucks.findAll({
             where: {
-                applicationsOpen: true
+                applicationOpen: true
             }
         }).then(function(dbTrucks){
             res.json(dbTrucks)
