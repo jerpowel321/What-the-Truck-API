@@ -50,6 +50,6 @@ module.exports = function(app) {
 
   // find truck via email
 
-  app.get("/api/trucks/info", controller.findTruckThroughEmail)
+  // app.get("/api/trucks/info", controller.findTruckThroughEmail)
 
 };

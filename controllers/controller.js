@@ -74,6 +74,16 @@ module.exports = {
             res.json(dbTrucks)
         })
     },
+    // find all trucks with applications that are denied
+    // findTruckThroughEmail:function (req,res){
+    //     db.Trucks.findAll({
+    //         where: {
+    //             email: req.body.email
+    //         }
+    //     }).then(function(dbTrucks){
+    //         res.json(dbTrucks)
+    //     })
+    // },
     // update info for 
     updateTruck: function (req, res){
         db.Trucks.update( {
