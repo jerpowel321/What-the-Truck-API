@@ -32,8 +32,16 @@ module.exports = {
         db.Trucks.findAll({})
         .then(function(dbTrucks){
             res.json(dbTrucks)
+        })
+        .catch(function(err){
+            res.json(err)
         });
     },
+
+    findAllTrucks: {
+
+    },
+
     // find specified truck
     findOneTruck: function(req, res){
         db.Trucks.findOne({
@@ -43,16 +51,22 @@ module.exports = {
         }).then(function(dbTrucks){
             res.json(dbTrucks)
         })
+        .catch(function(err){
+            res.json(err)
+        });
     },
     // find all trucks with an open application
     truckApplicationOpen: function(req, res){
         db.Trucks.findAll({
             where: {
-                applicationsOpen: true
+                applicationOpen: true
             }
         }).then(function(dbTrucks){
             res.json(dbTrucks)
         })
+        .catch(function(err){
+            res.json(err)
+        });
     },
     // find all trucks that are approved
     truckApplicationsApproved:function (req,res){
@@ -63,6 +77,9 @@ module.exports = {
         }).then(function(dbTrucks){
             res.json(dbTrucks)
         })
+        .catch(function(err){
+            res.json(err)
+        });
     },
     // find all trucks with applications that are denied
     truckApplicationsDenied:function (req,res){
@@ -73,6 +90,9 @@ module.exports = {
         }).then(function(dbTrucks){
             res.json(dbTrucks)
         })
+        .catch(function(err){
+            res.json(err)
+        });
     },
     // find all trucks with applications that are denied
     // findTruckThroughEmail:function (req,res){
@@ -97,6 +117,9 @@ module.exports = {
         })
         .then(function(dbTrucks){
             res.json(dbTrucks)
+        })
+        .catch(function(err){
+            res.json(err)
         });
     }
 }
