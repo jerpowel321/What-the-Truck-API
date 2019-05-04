@@ -77,11 +77,10 @@ module.exports = {
     // update info for 
     updateTruck: function (req, res){
         db.Trucks.update( {
-            
-            approved: false,
-            applicationOpen: false
+            approved: req.body.approved,
+            applicationOpen: req.body.applicationOpen
         }, 
-    
+        {
             where: {
                 id: req.params.id
             }
