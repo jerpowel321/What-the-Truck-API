@@ -76,6 +76,7 @@ module.exports = {
             }
         }).then(function(dbTrucks){
             res.json(dbTrucks)
+            console.log(res)
         })
         .catch(function(err){
             res.json(err)
