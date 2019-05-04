@@ -56,18 +56,18 @@ module.exports = {
         });
     },
     // find all trucks with an open application
-    // truckApplicationOpen: function(req, res){
-    //     db.Trucks.findAll({
-    //         where: {
-    //             applicationOpen: true
-    //         }
-    //     }).then(function(dbTrucks){
-    //         res.json(dbTrucks)
-    //     })
-    //     .catch(function(err){
-    //         res.json(err)
-    //     });
-    // },
+    truckApplicationOpen: function(req, res){
+        db.Trucks.findAll({
+            where: {
+                applicationsOpen: true
+            }
+        }).then(function(dbTrucks){
+            res.json(dbTrucks)
+        })
+        .catch(function(err){
+            res.json(err)
+        });
+    },
     // find all trucks that are approved
     truckApplicationsApproved:function (req,res){
         db.Trucks.findAll({
@@ -76,7 +76,6 @@ module.exports = {
             }
         }).then(function(dbTrucks){
             res.json(dbTrucks)
-            console.log(res)
         })
         .catch(function(err){
             res.json(err)
