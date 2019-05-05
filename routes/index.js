@@ -47,7 +47,7 @@ module.exports = function(app) {
 
   // find all trucks with applications that are denied
 
-  app.get("/denied", function(req,res){
+  app.get("/api/denied", function(req,res){
     controller.denied(req, res)
   }) 
 
