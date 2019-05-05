@@ -38,6 +38,16 @@ module.exports = {
         });
     },
 
+    open: function (req,res) {
+        db.Trucks.findAll({})
+        .then(function(dbTrucks){
+            res.json(dbTrucks)
+        })
+        .catch(function(err){
+            res.json(err)
+        });
+    },
+
     // find specified truck
     findOneTruck: function(req, res){
         db.Trucks.findOne({
