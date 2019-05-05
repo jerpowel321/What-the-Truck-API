@@ -15,7 +15,7 @@ module.exports = function(app) {
 
   // Update truck info
 
-  app.put("/api/trucks/:id", controller.updateTruck)
+  app.put("/api/open/:id", controller.updateTruck)
 
 
   // find all trucks
