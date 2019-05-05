@@ -52,11 +52,13 @@ module.exports = {
         });
     },
     // find all trucks with an open application
+
     truckApplicationOpen: function(req, res){
-        db.Trucks.findAll({
-            where: {
-                applicationOpen: true
-            }
+        db.Trucks
+            .findAll({
+                where: {
+                    applicationOpen: 1
+                }
         }).then(function(dbTrucks){
             res.json(dbTrucks)
         })
