@@ -39,7 +39,11 @@ module.exports = {
     },
 
     open: function (req,res) {
-        db.Trucks.findAll({})
+        db.Trucks.findAll({
+            where: {
+                applicationOpen: 1
+            }
+        })
         .then(function(dbTrucks){
             res.json(dbTrucks)
         })
