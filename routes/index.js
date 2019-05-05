@@ -39,6 +39,10 @@ module.exports = function(app) {
     controller.open(req, res)
   }) 
 
+  app.get("/api/open/:id", function(req,res){
+    controller.open(req, res)
+  }) 
+
   // find all trucks that are approved
 
   app.get("/api/approved", function(req,res){
