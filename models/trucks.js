@@ -32,7 +32,10 @@ module.exports = function(sequelize, DataTypes) {
         },
         email: {
             type: DataTypes.STRING,
-            validate: {isEmail: true},
+            validate: {
+                isEmail: true
+                // unique: true
+            },
         },
         phone: {
             type: DataTypes.INTEGER,
