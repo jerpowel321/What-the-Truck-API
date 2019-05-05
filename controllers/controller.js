@@ -85,7 +85,8 @@ module.exports = {
     denied: function (req,res) {
         db.Trucks.findAll({
             where: {
-                approved: 0
+                approved: 0,
+                applicationOpen: 0
             }
         })
         .then(function(dbTrucks){

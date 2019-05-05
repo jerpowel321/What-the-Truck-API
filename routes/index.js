@@ -51,8 +51,4 @@ module.exports = function(app) {
     controller.denied(req, res)
   }) 
 
-  // find truck via email
-
-  // app.get("/api/trucks/info", controller.findTruckThroughEmail)
-
 };
