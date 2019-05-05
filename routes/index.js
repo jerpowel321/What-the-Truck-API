@@ -40,7 +40,7 @@ module.exports = function(app) {
   }) 
 
   app.get("/api/open/:id", function(req,res){
-    controller.open(req, res)
+    controller.findOneTruck(req, res)
   }) 
 
   // find all trucks that are approved
