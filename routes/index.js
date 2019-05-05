@@ -35,7 +35,9 @@ module.exports = function(app) {
 
   // find all trucks with an open application
 
-  app.get("/api/trucks/open", controller.truckApplicationOpen)
+  app.get("/api/trucks/open", function(req,res){
+    controller.truckApplicationOpen(req, res)
+  }) 
 
 
   // find all trucks that are approved
