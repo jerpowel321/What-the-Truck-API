@@ -38,20 +38,6 @@ module.exports = {
         });
     },
 
-    open: function (req,res) {
-        db.Trucks.findAll({
-            where: {
-                applicationOpen: 1
-            }
-        })
-        .then(function(dbTrucks){
-            res.json(dbTrucks)
-        })
-        .catch(function(err){
-            res.json(err)
-        });
-    },
-
     // find specified truck
     findOneTruck: function(req, res){
         db.Trucks.findOne({
@@ -67,26 +53,28 @@ module.exports = {
     },
     // find all trucks with an open application
 
-    truckApplicationOpen: function(req, res){
-        db.Trucks
-            .findAll({
-                where: {
-                    applicationOpen: 1
-                }
-        }).then(function(dbTrucks){
+    open: function (req,res) {
+        db.Trucks.findAll({
+            where: {
+                applicationOpen: 1
+            }
+        })
+        .then(function(dbTrucks){
             res.json(dbTrucks)
         })
         .catch(function(err){
             res.json(err)
         });
     },
+
     // find all trucks that are approved
-    truckApplicationsApproved:function (req,res){
+    approved: function (req,res) {
         db.Trucks.findAll({
             where: {
-                approved: true
+                approved: 1
             }
-        }).then(function(dbTrucks){
+        })
+        .then(function(dbTrucks){
             res.json(dbTrucks)
         })
         .catch(function(err){
@@ -94,29 +82,20 @@ module.exports = {
         });
     },
     // find all trucks with applications that are denied
-    truckApplicationsDenied:function (req,res){
+    denied: function (req,res) {
         db.Trucks.findAll({
             where: {
-                approved: false
+                approved: 0
             }
-        }).then(function(dbTrucks){
+        })
+        .then(function(dbTrucks){
             res.json(dbTrucks)
         })
         .catch(function(err){
             res.json(err)
         });
     },
-    // find all trucks with applications that are denied
-    // findTruckThroughEmail:function (req,res){
-    //     db.Trucks.findAll({
-    //         where: {
-    //             email: req.body.email
-    //         }
-    //     }).then(function(dbTrucks){
-    //         res.json(dbTrucks)
-    //     })
-    // },
-    // update info for 
+
     updateTruck: function (req, res){
         db.Trucks.update( {
             approved: req.body.approved,
