@@ -34,7 +34,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             validate: {
                 isEmail: true
-                // unique: true
+                unique: true
             },
         },
         phone: {
