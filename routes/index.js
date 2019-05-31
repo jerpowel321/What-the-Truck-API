@@ -4,7 +4,7 @@ var db = require("../models/")
 
 // Routes
 // =============================================================
-module.exports = function(app) {
+module.exports = function (app) {
 
   // Post something to the front page
   app.get("/", function (req, res) {
@@ -12,47 +12,42 @@ module.exports = function(app) {
     res.send("Welcome to the food trucks API!");
   });
 
-
   // Update truck info
-
   app.put("/api/open/:id", controller.updateTruck)
 
-
   // find all trucks
-
   app.get("/api/trucks", controller.findAllTrucks)
 
 
   // Get specific truck 
-
   app.get("/api/trucks/:id", controller.findOneTruck)
 
 
   // add new truck
-
   app.post("/api/trucks", controller.createTruck)
-  
+
 
   // find all trucks with an open application
-
-  app.get("/api/open", function(req,res){
+  app.get("/api/open", function (req, res) {
     controller.open(req, res)
-  }) 
+  })
 
-  app.get("/api/open/:id", function(req,res){
+  app.get("/api/open/:id", function (req, res) {
     controller.findOneTruck(req, res)
-  }) 
+  })
 
   // find all trucks that are approved
-
-  app.get("/api/approved", function(req,res){
+  app.get("/api/approved", function (req, res) {
     controller.approved(req, res)
-  }) 
+  })
 
   // find all trucks with applications that are denied
-
-  app.get("/api/denied", function(req,res){
+  app.get("/api/denied", function (req, res) {
     controller.denied(req, res)
-  }) 
+  })
 
+  // find all reviews
+  app.get("/api/reviews", function (req, res) {
+    controller.viewReviews(req, res)
+  })
 };

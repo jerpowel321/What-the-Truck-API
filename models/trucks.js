@@ -1,4 +1,3 @@
-
 module.exports = function(sequelize, DataTypes) {
     var Trucks = sequelize.define("Trucks", {
         businessName: {

@@ -2,7 +2,7 @@ const db = require("./../models");
 
 module.exports = {
     // create new truck
-    createTruck: function (req,res) {
+    createTruck: function (req, res) {
         console.log("I love spongebob")
         db.Trucks.create({
             businessName: req.body.businessName,
@@ -20,99 +20,109 @@ module.exports = {
             state: req.body.state,
             zip: req.body.zip
         })
-        .then(function (dbTrucks){
-            res.json(dbTrucks)
-        })
-        .catch(function(err){
-            res.json(err)
-        });
+            .then(function (dbTrucks) {
+                res.json(dbTrucks)
+            })
+            .catch(function (err) {
+                res.json(err)
+            });
     },
     // find all trucks
-    findAllTrucks: function (req,res) {
+    findAllTrucks: function (req, res) {
+        console.log("This should find all trucks")
         db.Trucks.findAll({})
-        .then(function(dbTrucks){
-            res.json(dbTrucks)
-        })
-        .catch(function(err){
-            res.json(err)
-        });
+            .then(function (dbTrucks) {
+                res.json(dbTrucks)
+            })
+            .catch(function (err) {
+                res.json(err)
+            });
     },
 
     // find specified truck
-    findOneTruck: function(req, res){
+    findOneTruck: function (req, res) {
         db.Trucks.findOne({
             where: {
-                id:req.params.id
+                id: req.params.id
             }
-        }).then(function(dbTrucks){
+        }).then(function (dbTrucks) {
             res.json(dbTrucks)
         })
-        .catch(function(err){
-            res.json(err)
-        });
+            .catch(function (err) {
+                res.json(err)
+            });
     },
     // find all trucks with an open application
 
-    open: function (req,res) {
+    open: function (req, res) {
         db.Trucks.findAll({
             where: {
                 applicationOpen: 1
             }
         })
-        .then(function(dbTrucks){
-            res.json(dbTrucks)
-        })
-        .catch(function(err){
-            res.json(err)
-        });
+            .then(function (dbTrucks) {
+                res.json(dbTrucks)
+            })
+            .catch(function (err) {
+                res.json(err)
+            });
     },
 
     // find all trucks that are approved
-    approved: function (req,res) {
+    approved: function (req, res) {
         db.Trucks.findAll({
             where: {
                 approved: 1
             }
         })
-        .then(function(dbTrucks){
-            res.json(dbTrucks)
-        })
-        .catch(function(err){
-            res.json(err)
-        });
+            .then(function (dbTrucks) {
+                res.json(dbTrucks)
+            })
+            .catch(function (err) {
+                res.json(err)
+            });
     },
     // find all trucks with applications that are denied
-    denied: function (req,res) {
+    denied: function (req, res) {
         db.Trucks.findAll({
             where: {
                 approved: 0,
                 applicationOpen: 0
             }
         })
-        .then(function(dbTrucks){
-            res.json(dbTrucks)
-        })
-        .catch(function(err){
-            res.json(err)
-        });
+            .then(function (dbTrucks) {
+                res.json(dbTrucks)
+            })
+            .catch(function (err) {
+                res.json(err)
+            });
     },
 
-    updateTruck: function (req, res){
-        db.Trucks.update( {
+    updateTruck: function (req, res) {
+        db.Trucks.update({
             approved: req.body.approved,
             applicationOpen: req.body.applicationOpen
-        }, 
-        {
-            where: {
-                id: req.params.id
-            }
-        })
-        .then(function(dbTrucks){
-            res.json(dbTrucks)
-        })
-        .catch(function(err){
-            res.json(err)
-        });
+        },
+            {
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then(function (dbTrucks) {
+                res.json(dbTrucks)
+            })
+            .catch(function (err) {
+                res.json(err)
+            });
+    },
+    // view all reviews
+    viewReviews: function (req, res) {
+        db.Reviews.findAll({})
+            .then(function (dbReviews) {
+                res.json(dbReviews)
+            })
+            .catch(function (err) {
+                res.json(err)
+            });
     }
 }
-  
