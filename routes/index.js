@@ -47,7 +47,7 @@ module.exports = function (app) {
   })
 
   // find all reviews
-  app.get("/api/reviews", function (req, res) {
+  app.get("/api/trucks/reviews", function (req, res) {
     controller.viewReviews(req, res)
   })
 };

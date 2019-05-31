@@ -1,17 +1,17 @@
 module.exports = function (sequelize, DataTypes) {
 	var Reviews = sequelize.define("Reviews", {
-		truckName: {
+		reviewBusiness: {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
-		rating: {
+		reviewRating: {
 			type: DataTypes.INTEGER,
 			max: 5,
 			min: 0,
 			isDecimal: true,
 			allowNull: false,
 		},
-		comments: {
+		reviewComments: {
 			type: DataTypes.STRING,
 			len: [10, 180],
 		}
