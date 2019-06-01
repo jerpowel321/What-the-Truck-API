@@ -130,18 +130,8 @@ module.exports = {
 				res.json(err)
 			});
 	},
+	
 	// view all reviews
-	viewReviews: function (req, res) {
-		console.log("This should find all reviews")
-		db.Reviews.findAll({})
-			.then(function (dbReviews) {
-				res.json(dbReviews)
-			})
-			.catch(function (err) {
-				res.json(err)
-			});
-	},
-
 	findAllReviews: function (req, res) {
 		console.log("This should find all Reviews")
 		db.Reviews.findAll({})
