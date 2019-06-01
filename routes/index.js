@@ -49,10 +49,8 @@ module.exports = function (app) {
    // add new review
    app.post("/api/reviews", controller.createReview)
 
-  // view all reviews
+  // Get specific reviews for seclected truck
 
-  // app.get("/api/trucks/reviews", controller.viewReviews)
-
-  app.get("/api/reviews", controller.findAllReviews)
+  app.get("/api/reviews:id", controller.findOneTruckReviews)
 
 };

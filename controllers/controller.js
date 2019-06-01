@@ -131,7 +131,7 @@ module.exports = {
 				res.json(err)
 			});
 	},
-	// view all reviews
+// 	// view all reviews
 	findAllReviews: function (req, res) {
 		console.log("This should find all Reviews")
 		db.Reviews.findAll({})
@@ -141,6 +141,20 @@ module.exports = {
 			.catch(function (err) {
 				res.json(err)
 			});
+	},
+
+	// find specified truck
+	findOneTruckReviews: function (req, res) {
+		db.Reviews.findOne({
+			where: {
+				id: req.params.id
+			}
+		}).then(function (dbTrucks) {
+			res.json(dbTrucks)
+		})
+			.catch(function (err) {
+				res.json(err)
+			});
 	}
-		
 }
+
