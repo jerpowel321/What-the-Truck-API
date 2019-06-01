@@ -4,16 +4,27 @@ module.exports = function (sequelize, DataTypes) {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
+		userName: {
+			type:DataTypes.STRING,
+			allowNull: false,
+			validate: {
+				len: [2, 20],
+			},
+		},
 		rating: {
 			type: DataTypes.INTEGER,
-			max: 5,
-			min: 0,
-			isDecimal: true,
 			allowNull: false,
+			validate: {
+				isDecimal: true,
+				max: 5,
+				min: 0,
+			},
 		},
-		comments: {
+		comment: {
 			type: DataTypes.STRING,
-			len: [10, 180],
+			validate: {
+				len: [10, 180],
+			},
 		}
 	})
 
