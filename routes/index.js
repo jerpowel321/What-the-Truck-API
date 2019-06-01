@@ -53,6 +53,6 @@ module.exports = function (app) {
   app.get("/api/reviews", controller.findAllReviews)
 
   // view all reviews from one business
-  app.get("/api/reviews:id", controller.findOneTruckReviews)
+  app.get("/api/reviews:truckName", controller.findOneTruckReviews)
 
 };
