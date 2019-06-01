@@ -121,7 +121,8 @@ module.exports = {
 		db.Reviews.create({
 			truckName: req.body.truckName,
 			rating: req.body.rating,
-			comments: req.body.comments,
+			userName: req.body.userName,
+			comment: req.body.comment,
 		})
 			.then(function (dbReview) {
 				res.json(dbReview)
