@@ -47,10 +47,10 @@ module.exports = function (app) {
   })
 
    // add new review
-   app.post("/api/trucks/reviews", controller.createReview)
+   app.post("/api/reviews", controller.createReview)
 
   // view all reviews
-  
+
   // app.get("/api/trucks/reviews", controller.viewReviews)
 
   app.get("/api/reviews", controller.findAllReviews)
