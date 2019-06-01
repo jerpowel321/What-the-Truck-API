@@ -143,14 +143,14 @@ module.exports = {
 			});
 	},
 
-	// find specified truck
+	// find specified review
 	findOneTruckReviews: function (req, res) {
-		db.Reviews.findOne({
+		db.Reviews.findAll({
 			where: {
-				id: req.params.id
+				truckName: req.params.id
 			}
-		}).then(function (dbTrucks) {
-			res.json(dbTrucks)
+		}).then(function (dbReviews) {
+			res.json(dbReviews)
 		})
 			.catch(function (err) {
 				res.json(err)
