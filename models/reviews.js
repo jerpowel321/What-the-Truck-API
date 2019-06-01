@@ -8,7 +8,15 @@ module.exports = function (sequelize, DataTypes) {
 			type:DataTypes.STRING,
 			allowNull: false,
 			validate: {
-				len: [2, 20],
+				customValidator(value) {
+					if (value == null || value.length < 2) {
+						throw new Error("Your name must have two or more characters.");
+					}
+
+					if (value.length > 20) {
+						throw new Error("Your name must have twenty characters or less.");
+					}
+				},
 			},
 		},
 		rating: {
@@ -23,7 +31,15 @@ module.exports = function (sequelize, DataTypes) {
 		comment: {
 			type: DataTypes.STRING,
 			validate: {
-				len: [10, 180],
+				customValidator(value) {
+					if (value == null || value.length < 10) {
+						throw new Error("Please provide a longer comment.");
+					}
+
+					if (value.length > 180) {
+						throw new Error("Please shorten your comment to 180 characters.");
+					}
+				},
 			},
 		}
 	})
