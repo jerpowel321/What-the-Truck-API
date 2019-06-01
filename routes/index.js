@@ -50,5 +50,7 @@ module.exports = function (app) {
    app.post("/api/trucks/reviews", controller.createReview)
 
   // view all reviews
-  app.get("/api/trucks/reviews", controller.findAllReviews)
+  app.get("/api/trucks/reviews", controller.viewReviews)
+
+  app.get("/api/reviews", controller.findAllReviews)
 };

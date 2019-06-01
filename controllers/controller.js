@@ -130,7 +130,6 @@ module.exports = {
 				res.json(err)
 			});
 	},
-	
 	// view all reviews
 	findAllReviews: function (req, res) {
 		console.log("This should find all Reviews")
