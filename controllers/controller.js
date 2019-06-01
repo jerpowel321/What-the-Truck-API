@@ -147,7 +147,7 @@ module.exports = {
 	findOneTruckReviews: function (req, res) {
 		db.Reviews.findAll({
 			where: {
-				truckName: req.params.id
+				truckName: req.params.truckName
 			}
 		}).then(function (dbReviews) {
 			res.json(dbReviews)
