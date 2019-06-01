@@ -46,10 +46,8 @@ module.exports = function (app) {
     controller.denied(req, res)
   })
 
-   // view all reviews
-   app.post("/api/trucks/reviews", function (req, res) {
-    controller.createReview(req, res)
-  })
+   // add new review
+   app.post("/api/trucks/reviews", controller.createReview)
 
   // view all reviews
   app.get("/api/trucks/reviews", function (req, res) {
