@@ -123,6 +123,7 @@ module.exports = {
 			rating: req.body.rating,
 			userName: req.body.userName,
 			comment: req.body.comment,
+			userImages: req.body.userImages,
 		})
 			.then(function (dbReview) {
 				res.json(dbReview)

@@ -43,7 +43,14 @@ module.exports = function (sequelize, DataTypes) {
 			},
 		},
 		userImages: {
-			type: Sequelize.ARRAY(Sequelize.TEXT),
+			type: Sequelize.STRING,
+			allowNull: false,
+			get() {
+				return JSON.parse(this.getDataValue('userImages'));
+			},
+			set(val) {
+			   this.setDataValue('userImages', JSON.stringify(val));
+			},
 		}
 	})
 
