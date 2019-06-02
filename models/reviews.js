@@ -43,7 +43,7 @@ module.exports = function (sequelize, DataTypes) {
 			},
 		},
 		userImages: {
-			type: Sequelize.STRING,
+			type: DataTypes.STRING,
 			allowNull: false,
 			get() {
 				return JSON.parse(this.getDataValue('userImages'));
