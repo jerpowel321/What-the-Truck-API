@@ -41,6 +41,9 @@ module.exports = function (sequelize, DataTypes) {
 					}
 				},
 			},
+		},
+		userImages: {
+			type: Sequelize.ARRAY(Sequelize.TEXT),
 		}
 	})
 
