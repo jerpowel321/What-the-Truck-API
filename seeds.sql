@@ -18,11 +18,7 @@
 -- Jen's Pizza --
 -- Mice-Cream Truck --
 
-
-INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ('Jen’s Pizza', 'https://pizzahub.cs/', 'Italian', 'https://pizzahub.ca/menu',  'Jennifer', 'Powell', 'jerpowel321@gmail.com', '1157289976', '555 Mission', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
-
-INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ('H', 'https://www.joejuice.com/', 'American', 'https://www.joejuice.com/menu/',  'Mel', 'Powell', 'jerpowel321@gmail.com', '1157289976', '555 Mission', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
-
+USE uuchh311d4jifwcx
 
 -- Truck Business Information: id, businessName, website, cuisine, menu, firstName, middleInitial, lastName, email, phone, address, address2, city, state, zip, monday, tuesday, wednesday, thursday, friday, saturday, sunday, wait, businessImages, businessDescription, approved, applicationOpen, createdAt, updatedAt
 

@@ -55,12 +55,14 @@ module.exports = function(sequelize, DataTypes) {
             unique: true
         },
         phone: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
-            validate: {len: [9,10]},
             customValidator(value) {
-                if (value == null ) {
+                if (value == null) {
                     throw new Error("Please provide contact phone number.");
+                }
+                if (value.length < 9 || value.length >10) {
+                    throw new Error("Please provide a valid contact phone number with 9 or 10 digits.");
                 }
             },
         },
