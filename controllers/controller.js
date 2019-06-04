@@ -19,15 +19,16 @@ module.exports = {
 			city: req.body.city,
 			state: req.body.state,
 			zip: req.body.zip,
-			monday: this.state.monday,
-			tuesday: this.state.tuesday,
-			wednesday: this.state.wednesday,
-			thursday: this.state.thursday,
-			friday: this.state.friday,
-			saturday: this.state.saturday,
-			sunday: this.state.sunday,
-			wait: this.state.wait,
-			businessDescription: this.state.businessDescription
+			monday: req.body.monday,
+			tuesday: req.body.tuesday,
+			wednesday: req.body.wednesday,
+			thursday: req.body.thursday,
+			friday: req.body.friday,
+			saturday: req.body.saturday,
+			sunday: req.body.sunday,
+			wait: req.body.wait,
+			businessImages: req.body.businessImages,
+			businessDescription: req.body.businessDescription
 
 		})
 			.then(function (dbTrucks) {
