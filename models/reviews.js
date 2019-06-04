@@ -44,13 +44,17 @@ module.exports = function (sequelize, DataTypes) {
 		},
 		userImages: {
 			type: DataTypes.STRING,
-			allowNull: false,
+			allowNull: true,
 			get() {
 				return JSON.parse(this.getDataValue('userImages'));
 			},
 			set(val) {
 			   this.setDataValue('userImages', JSON.stringify(val));
 			},
+		},
+		businessOwner: {
+			type: DataTypes.BOOLEAN,
+            defaultValue: false
 		}
 	})
 

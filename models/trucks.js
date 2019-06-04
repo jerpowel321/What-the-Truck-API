@@ -58,6 +58,70 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+        state: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        monday: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        tuesday: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        wednesday: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        thursday: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        friday: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        saturday: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        sunday: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        wait: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            validate: {
+				max: 120,
+				min: 0,
+			},
+        },
+        businessImages: {
+			type: DataTypes.STRING,
+			allowNull: true,
+			get() {
+				return JSON.parse(this.getDataValue('businessImages'));
+			},
+			set(val) {
+			   this.setDataValue('businessImages', JSON.stringify(val));
+			},
+        },
+        businessDescription: {
+            type: DataTypes.STRING,
+			validate: {
+				customValidator(value) {
+					if (value == null || value.length < 10) {
+						throw new Error("Please provide a longer business description.");
+					}
+
+					if (value.length > 180) {
+						throw new Error("Please shorten your business description to 180 characters.");
+					}
+				},
+			},
+		},
         approved: {
             type: DataTypes.BOOLEAN,
             defaultValue: false
