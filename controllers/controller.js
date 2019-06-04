@@ -132,7 +132,18 @@ module.exports = {
 				res.json(err)
 			});
 	},
-	// create reviews
+ 	// view all reviews
+	 findAllReviews: function (req, res) {
+		console.log("This should find all Reviews")
+		db.Reviews.findAll({})
+			.then(function (dbReviews) {
+				res.json(dbReviews)
+			})
+			.catch(function (err) {
+				res.json(err)
+			});
+	},	
+	// create ownerImages
 	saveOwnerImages: function (req, res) {
 	console.log("Uploading Owner Images")
 	db.OwnerImages.create({
@@ -147,12 +158,12 @@ module.exports = {
 		});
 	},
 
- 	// view all reviews
-	findAllReviews: function (req, res) {
-		console.log("This should find all Reviews")
-		db.Reviews.findAll({})
-			.then(function (dbReviews) {
-				res.json(dbReviews)
+ 	// view all ownerImages
+	findAllOwnerImages: function (req, res) {
+		console.log("This should find all Owner Images")
+		db.OwnerImages.findAll({})
+			.then(function (dbOwnerImages) {
+				res.json(dbOwnerImages)
 			})
 			.catch(function (err) {
 				res.json(err)

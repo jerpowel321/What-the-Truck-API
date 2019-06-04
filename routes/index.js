@@ -46,14 +46,17 @@ module.exports = function (app) {
     controller.denied(req, res)
   })
 
-   // add new review
+  // add new review
    app.post("/api/reviews", controller.createReview)
    
-   // add new images (from business)
-   app.post("/api/owner", controller.saveOwnerImages)
-
   // view all reviews
   app.get("/api/reviews", controller.findAllReviews)
+
+  // add new images (from business)
+  app.post("/api/owner", controller.saveOwnerImages)
+
+  // view all images (from business)
+  app.get("/api/owner", controller.findAllOwnerImages)
 
   // view all reviews from one business
   app.get("/api/reviews/:truckName", controller.findOneTruckReviews)
