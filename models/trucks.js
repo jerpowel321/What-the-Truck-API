@@ -163,17 +163,17 @@ module.exports = function(sequelize, DataTypes) {
         businessDescription: {
             type: DataTypes.STRING,
             allowNull: true,
-			validate: {
-				customValidator(value) {
-					if (value == null || value.length < 10) {
-						throw new Error("Please provide a longer business description.");
-					}
+			// validate: {
+			// 	customValidator(value) {
+			// 		if (value == null || value.length < 10) {
+			// 			throw new Error("Please provide a longer business description.");
+			// 		}
 
-					if (value.length > 180) {
-						throw new Error("Please shorten your business description to 180 characters.");
-					}
-				},
-			},
+			// 		if (value.length > 180) {
+			// 			throw new Error("Please shorten your business description to 180 characters.");
+			// 		}
+			// 	},
+			// },
 		},
         approved: {
             type: DataTypes.BOOLEAN,
