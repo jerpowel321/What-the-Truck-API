@@ -109,24 +109,23 @@ module.exports = {
 			});
 	},
 
-	updateTruck: function (req, res) {
-		console.log("Updating Truck Information")
-		db.Trucks.update({
-			approved: req.body.approved,
-			applicationOpen: req.body.applicationOpen
-		},
-			{
-				where: {
-					id: req.params.id
-				}
-			})
-			.then(function (dbTrucks) {
-				res.json(dbTrucks)
-			})
-			.catch(function (err) {
-				res.json(err)
-			});
-	},
+    updateTruck: function (req, res){
+        db.Trucks.update( {
+            approved: req.body.approved,
+            applicationOpen: req.body.applicationOpen
+        }, 
+        {
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(function(dbTrucks){
+            res.json(dbTrucks)
+        })
+        .catch(function(err){
+            res.json(err)
+        });
+    },
 	// create reviews
 	createReview: function (req, res) {
 		console.log("Creating Review")
