@@ -116,7 +116,7 @@ module.exports = {
 		},
 			{
 				where: {
-					id: req.body.businessId
+					id: req.params.id
 				}
 			})
 			.then(function (dbTrucks) {
