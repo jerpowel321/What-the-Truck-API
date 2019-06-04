@@ -27,29 +27,51 @@ INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, e
 -- Truck Business Information: id, businessName, website, cuisine, menu, firstName, middleInitial, lastName, email, phone, address, address2, city, state, zip, monday, tuesday, wednesday, thursday, friday, saturday, sunday, wait, businessImages, businessDescription, approved, applicationOpen, createdAt, updatedAt
 
 -- Food Truck Business Information --
+
 -- Pick & Go Sandwiches --
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Pick & Go Sandwiches", 'https://properfood.com/', 'American', 'https://properfood.com/menu/',  'James', 'Woods', 'jamesW@gmail.com', '4158493023', '116 Montgomery Street', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
+
 -- For The Love Of Ice Cream --
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("For The Love Of Ice Cream", 'https://www.baskinrobbins.com/content/baskinrobbins/en.html', 'Dessert', 'https://www.baskinrobbins.com/content/baskinrobbins/en/products/icecream/flavors.html',  'David', 'Macarron', 'dmacarron@gmail.com', '4154637283', '310 Westlake Center', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
+
 -- Burrito Heaven --
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Burrito Heaven", 'https://unodostacos.com/', 'Mexican', 'https://unodostacos.com/#menu',  'Jose', 'Garcia', 'jose.garcia@gmail.com', '4155736273', '595 Market St', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
+
 -- A Night In Paris --
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("A Night In Paris", 'http://ruelepicsf.com/', 'French', 'http://ruelepicsf.com/menu.php',  'Pierre', 'LaGrow', 'baguetteman@gmail.com', '4155557234', '900 Pine St,', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
+
 -- Fit For A King Soup --
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Fit For A King Soup", 'https://boudinbakery.com/home/', 'Other', 'https://boudinbakery.com/menu/soups-chilis/',  'Peter', 'Spoon', 'psoon@yahoo.com', '4154528988', '750 Mission', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
+
 -- Golden Palace --
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Golden Palace", 'https://www.pandaexpress.com/', 'Chinese', 'https://www.pandaexpress.com/menu',  'Kim', 'Chen', 'kchen@yahoo.com', '4154528988', '750 Mission', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
+
 -- Jimmy's Pho-nomenal Pho --
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Jimmy's Pho-nomenal Pho", 'http://www.pho2000sf.com/', 'Vietnamese', 'http://www.pho2000sf.com/menu/',  'Jimmy', 'Tu', 'jimmy2@gmail.com', '4153334563', '750 Mission', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
+
 -- Burger Boss --
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Burger Boss", 'https://www.shakeshack.com/', 'American', 'https://www.shakeshack.com/food-and-drink/',  'Taylor', 'Tanner', 'taytan@gmail.com', '4157328345', '750 Mission', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
 
 -- Noah's Fried Dough-a --
-INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Noah's Fried Dough-a", 'https://www.krispykreme.com/', 'American', 'https://www.krispykreme.com/menu/doughnuts',  'Noah', 'Glasser', 'noah@gmail.com', '1157289977', '555 Mission', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Noah's Fried Dough-a", 'https://www.krispykreme.com/', 'American', 'https://www.krispykreme.com/menu/doughnuts',  'Noah', 'Glasser', 'noah@gmail.com', '4154528988', '750 Mission', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
 
 -- Rare Meats --
-INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Rare Meats", 'https://www.krispykreme.com/', 'American', 'https://www.krispykreme.com/menu/doughnuts',  'Noah', 'Glasser', 'noah@gmail.com', '1157289977', '555 Mission', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Rare Meats", 'https://www.fossilfarms.com/', 'American', 'https://www.fossilfarms.com/products',  'John', 'Tucker', 'johntucker@gmail.com', '4155628994', '1 Main Street', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
+
 -- Mel's Tesla Hunter --
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Rare Meats", 'https://www.fossilfarms.com/', 'French', 'https://www.fossilfarms.com/products',  'Melanie', 'Marsollier', 'melaniem@gmail.com', '415593850', '721 Market Street', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
+
 -- Cyrus' Truck --
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Cyrus' Truck", 'https://oasisgrill.com/', 'Mediterranean', 'https://first.oasisgrill.com/',  'Cyrus', 'Ghadiri', 'cyrus@gmail.com', '415593850', '92 Market Street', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
+
 -- Denis Hut Jr's --
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Denis Hut Jr's", 'https://www.benjerry.com/', 'Dessert', 'https://www.benjerry.com/flavors',  'Denis', 'Richie', 'richied@gmail.com', '4154738234', '92 Market Street', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
 
 -- Jen's Pizza --
-INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Jen’s Pizza", "https://pizzahub.cs/", "Italian", "https://pizzahub.ca/menu",  "Jennifer", "Powell", "jerpowel321@gmail.com", "1157289976", "555 Mission", "San Francisco", "CA", "941007", "2019-05-31 17:50:26", "2019-05-31 17:50:26");
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Jen’s Pizza", "https://pizzahub.cs/", "Italian", "https://pizzahub.ca/menu",  "Jennifer", "Powell", "jerpowel321@gmail.com", "415289976", "555 Mission", "San Francisco", "CA", "941007", "2019-05-31 17:50:26", "2019-05-31 17:50:26");
 
 -- Mice-Cream Truck --
-
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Mice-Cream Trucks", 'https://www.haagendazs.us/', 'Dessert', 'https://www.haagendazs.us/products',  'Larry', 'Smith', 'larrySmith@gmail.com', '4156564734', '92 Market Street', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
 
 
 
@@ -69,9 +91,9 @@ INSERT INTO Reviews (truckName, userName, rating, comment, createdAt, updatedAt)
 INSERT INTO Reviews (truckName, userName, rating, comment, createdAt, updatedAt) VALUES ("For the Love Of Ice Cream", "Denis" 5, "AMAZING ICE CREAM SANDWICHES!", "2019-06-02 18:50:40", "2019-06-02 18:50:40");
 
 -- Burrito Heaven --
-INSERT INTO Reviews (truckName, userName, rating, comment, createdAt, updatedAt) VALUES ("Burrito Heaven", "Amber" 2, "The portions are so small. I will still hungry after eating my super size burrito.", "2019-06-02 18:50:40", "2019-06-02 18:50:40");
+INSERT INTO Reviews (truckName, userName, rating, comment, createdAt, updatedAt) VALUES ("Burrito Heaven", "Amber" 2, "The portions are so small. I was still hungry after eating my super size burrito.", "2019-06-02 18:50:40", "2019-06-02 18:50:40");
 INSERT INTO Reviews (truckName, userName, rating, comment, createdAt, updatedAt) VALUES ("Burrito Heaven", "Liam" 1, "So disapointed. I ordered Tacos and got a burrito. Told them they messed up my order and was told I'd have to wait another 30 minutes for them to fix it.", "2019-06-02 18:50:40", "2019-06-02 18:50:40");
-INSERT INTO Reviews (truckName, userName, rating, comment, createdAt, updatedAt) VALUES ("Burrito Heaven", "Tod" 3, "They should really change their name to Burrito Disaster. Serious question, how are they still in business?", "2019-06-02 18:50:40", "2019-06-02 18:50:40");
+INSERT INTO Reviews (truckName, userName, rating, comment, createdAt, updatedAt) VALUES ("Burrito Heaven", "Tod" 1, "They should really change their name to Burrito Disaster. Serious question, how are they still in business?", "2019-06-02 18:50:40", "2019-06-02 18:50:40");
 
 -- A Night In Paris --
 INSERT INTO Reviews (truckName, userName, rating, comment, createdAt, updatedAt) VALUES ("Burrito Heaven", "Amber" 2, "The portions are so small. I will still hungry after eating my super size burrito.", "2019-06-02 18:50:40", "2019-06-02 18:50:40");
