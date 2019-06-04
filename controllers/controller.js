@@ -110,6 +110,7 @@ module.exports = {
 	},
 
 	updateTruck: function (req, res) {
+		console.log("Updating Truck Information")
 		db.Trucks.update({
 			approved: req.body.approved,
 			applicationOpen: req.body.applicationOpen
