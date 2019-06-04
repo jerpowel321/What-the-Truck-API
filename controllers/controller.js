@@ -18,7 +18,17 @@ module.exports = {
 			address2: req.body.address2,
 			city: req.body.city,
 			state: req.body.state,
-			zip: req.body.zip
+			zip: req.body.zip,
+			monday: this.state.monday,
+			tuesday: this.state.tuesday,
+			wednesday: this.state.wednesday,
+			thursday: this.state.thursday,
+			friday: this.state.friday,
+			saturday: this.state.saturday,
+			sunday: this.state.sunday,
+			wait: this.state.wait,
+			businessDescription: this.state.businessDescription
+
 		})
 			.then(function (dbTrucks) {
 				res.json(dbTrucks)
@@ -132,8 +142,8 @@ module.exports = {
 				res.json(err)
 			});
 	},
- 	// view all reviews
-	 findAllReviews: function (req, res) {
+	// view all reviews
+	findAllReviews: function (req, res) {
 		console.log("This should find all Reviews")
 		db.Reviews.findAll({})
 			.then(function (dbReviews) {
@@ -142,23 +152,23 @@ module.exports = {
 			.catch(function (err) {
 				res.json(err)
 			});
-	},	
+	},
 	// create ownerImages
 	saveOwnerImages: function (req, res) {
-	console.log("Uploading Owner Images")
-	db.OwnerImages.create({
-		truckName: req.body.truckName,
-		userImages: req.body.userImages,
-	})
-		.then(function (dbOwnerImages) {
-			res.json(dbReviewOwnerImages)
+		console.log("Uploading Owner Images")
+		db.OwnerImages.create({
+			truckName: req.body.truckName,
+			userImages: req.body.userImages,
 		})
-		.catch(function (err) {
-			res.json(err)
-		});
+			.then(function (dbOwnerImages) {
+				res.json(dbReviewOwnerImages)
+			})
+			.catch(function (err) {
+				res.json(err)
+			});
 	},
 
- 	// view all ownerImages
+	// view all ownerImages
 	findAllOwnerImages: function (req, res) {
 		console.log("This should find all Owner Images")
 		db.OwnerImages.findAll({})
