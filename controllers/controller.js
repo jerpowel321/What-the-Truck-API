@@ -132,7 +132,22 @@ module.exports = {
 				res.json(err)
 			});
 	},
-// 	// view all reviews
+	// create reviews
+	saveOwnerImages: function (req, res) {
+	console.log("Uploading Owner Images")
+	db.OwnerImages.create({
+		truckName: req.body.truckName,
+		userImages: req.body.userImages,
+	})
+		.then(function (dbOwnerImages) {
+			res.json(dbReviewOwnerImages)
+		})
+		.catch(function (err) {
+			res.json(err)
+		});
+	},
+
+ 	// view all reviews
 	findAllReviews: function (req, res) {
 		console.log("This should find all Reviews")
 		db.Reviews.findAll({})

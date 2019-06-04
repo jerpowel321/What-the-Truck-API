@@ -48,6 +48,9 @@ module.exports = function (app) {
 
    // add new review
    app.post("/api/reviews", controller.createReview)
+   
+   // add new images (from business)
+   app.post("/api/owner", controller.saveOwnerImages)
 
   // view all reviews
   app.get("/api/reviews", controller.findAllReviews)
