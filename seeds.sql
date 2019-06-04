@@ -1,27 +1,7 @@
 -- Truck Business Information --
+-- Original Business Names: Tico's Tacos Fish Dish Jacob's Hoagies The Roasted Pig Sushi Truck Frozen Banana Bonanza Ol' Sally May's Grill The French Quarter Jimmy's Pho Truck Sajeel's Southern Grill
 
-INSERT INTO Trucks (businessName, cuisine, firstName, lastName, email, phone, address, city, state, zip) VALUES ("Tico's Tacos", "Mexican", "Noah", "Glasser", "noah@gmail.com", "4157289976", "555 Mission", "San Francisco", "CA", "941007")
-INSERT INTO Trucks (businessName, cuisine, firstName, lastName, email, phone, address, city, state, zip) VALUES ("Fish Dish", "Chinese", "4133284446", "true")
-INSERT INTO Trucks (businessName, cuisine, firstName, lastName, email, phone, address, city, state, zip) VALUES ("Jacob's Hoagies", "American", "5107288890", "true")
-INSERT INTO Trucks (businessName, cuisine, firstName, middleInitial, lastName, email, phone, address, address2, city, state, zip, approved) VALUES ("The Roasted Pig", "American", "786940392", "true")
-INSERT INTO Trucks (businessName, cuisine, phone, approved) VALUES ("Sushi Truck", "Japanese", "4158674930", "true")
-INSERT INTO Trucks (businessName, cuisine, phone, approved) VALUES ("Frozen Banana Bonanza", "American", "4159982674", "true")
-INSERT INTO Trucks (businessName, cuisine, phone, approved) VALUES ("Ol' Sally May's Grill", "American", "4150982658", "true")
-INSERT INTO Trucks (businessName, cuisine, phone, approved) VALUES ("The French Quarter", "French", "4151328853", "true")
-INSERT INTO Trucks (businessName, cuisine, phone, approved) VALUES ("Jimmy's Pho Truck", "Vietnamese", "4159877493", "true")
-INSERT INTO Trucks (businessName, cuisine, phone, approved) VALUES ("Sajeel's Southern Grill", "Mexican", "4150098375", "true")
-
-
--- insert many
-
-
-id, businessName, website, cuisine, menu, firstName, middleInitial, lastName, email, phone, address, address2, city, state, zip, approved, applicationOpen, createdAt, updatedAt
-
-INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ('Jen’s Pizza', 'https://pizzahub.cs/', 'Italian', 'https://pizzahub.ca/menu',  'Jennifer', 'Powell', 'jerpowel321@gmail.com', '1157289976', '555 Mission', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
-INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Noah's Fried Dough-a", 'https://www.krispykreme.com/', 'American', 'https://www.krispykreme.com/menu/doughnuts',  'Noah', 'Glasser', 'noah@gmail.com', '1157289977', '555 Mission', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
-INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ('H', 'https://www.joejuice.com/', 'American', 'https://www.joejuice.com/menu/',  'Mel', 'Powell', 'jerpowel321@gmail.com', '1157289976', '555 Mission', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
-
--- Reviews: id, truckName, userName, rating, comment, userImages, businessOwner, createdAt, updatedAt --
+-- CURRENT BUSINESS NAMES --
 -- Pick & Go Sandwiches --
 -- For The Love Of Ice Cream --
 -- Burrito Heaven --
@@ -39,6 +19,42 @@ INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, e
 -- Mice-Cream Truck --
 
 
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ('Jen’s Pizza', 'https://pizzahub.cs/', 'Italian', 'https://pizzahub.ca/menu',  'Jennifer', 'Powell', 'jerpowel321@gmail.com', '1157289976', '555 Mission', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
+
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ('H', 'https://www.joejuice.com/', 'American', 'https://www.joejuice.com/menu/',  'Mel', 'Powell', 'jerpowel321@gmail.com', '1157289976', '555 Mission', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
+
+
+-- Truck Business Information: id, businessName, website, cuisine, menu, firstName, middleInitial, lastName, email, phone, address, address2, city, state, zip, monday, tuesday, wednesday, thursday, friday, saturday, sunday, wait, businessImages, businessDescription, approved, applicationOpen, createdAt, updatedAt
+
+-- Food Truck Business Information --
+-- Pick & Go Sandwiches --
+-- For The Love Of Ice Cream --
+-- Burrito Heaven --
+-- A Night In Paris --
+-- Fit For A King Soup --
+-- Golden Palace --
+-- Jimmy's Pho-nomenal Pho --
+-- Burger Boss --
+
+-- Noah's Fried Dough-a --
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Noah's Fried Dough-a", 'https://www.krispykreme.com/', 'American', 'https://www.krispykreme.com/menu/doughnuts',  'Noah', 'Glasser', 'noah@gmail.com', '1157289977', '555 Mission', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
+
+-- Rare Meats --
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Rare Meats", 'https://www.krispykreme.com/', 'American', 'https://www.krispykreme.com/menu/doughnuts',  'Noah', 'Glasser', 'noah@gmail.com', '1157289977', '555 Mission', 'San Francisco', 'CA', '941007', '2019-05-31 17:50:26', '2019-05-31 17:50:26');
+-- Mel's Tesla Hunter --
+-- Cyrus' Truck --
+-- Denis Hut Jr's --
+
+-- Jen's Pizza --
+INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, createdAt, updatedAt) VALUES ("Jen’s Pizza", "https://pizzahub.cs/", "Italian", "https://pizzahub.ca/menu",  "Jennifer", "Powell", "jerpowel321@gmail.com", "1157289976", "555 Mission", "San Francisco", "CA", "941007", "2019-05-31 17:50:26", "2019-05-31 17:50:26");
+
+-- Mice-Cream Truck --
+
+
+
+
+
+-- Reviews: id, truckName, userName, rating, comment, userImages, businessOwner, createdAt, updatedAt --
 -- User Review Business Information --
 
 -- Pick & Go Sandwiches --

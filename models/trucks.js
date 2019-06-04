@@ -3,7 +3,12 @@ module.exports = function(sequelize, DataTypes) {
         businessName: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {len: [1,100]}
+            customValidator(value) {
+                if (value == null || value.length < 5) {
+                    throw new Error("Please provide a business name.");
+                }
+            },
+            // validate: {len: [1,100]}
         },
         website: {
             type: DataTypes.STRING,
@@ -12,7 +17,12 @@ module.exports = function(sequelize, DataTypes) {
         cuisine: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {len: [1,100]}
+            // validate: {len: [1,100]},
+            customValidator(value) {
+                if (value == null || value.length < 5) {
+                    throw new Error("Please provide type of cusine.");
+                }
+            },
         },
         menu:{
             type: DataTypes.STRING,
@@ -21,6 +31,11 @@ module.exports = function(sequelize, DataTypes) {
         firstName: {
             type: DataTypes.STRING,
             allowNull: false,
+            customValidator(value) {
+                if (value == null) {
+                    throw new Error("Please provide contact first name.");
+                }
+            },
         },
         middleInitial: {
             type: DataTypes.STRING,
@@ -28,6 +43,11 @@ module.exports = function(sequelize, DataTypes) {
         lastName: {
             type: DataTypes.STRING,
             allowNull: false,
+            customValidator(value) {
+                if (value == null) {
+                    throw new Error("Please provide contact last name.");
+                }
+            },
         },
         email: {
             type: DataTypes.STRING,
@@ -37,11 +57,21 @@ module.exports = function(sequelize, DataTypes) {
         phone: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            validate: {len: [9,10]}
+            validate: {len: [9,10]},
+            customValidator(value) {
+                if (value == null ) {
+                    throw new Error("Please provide contact phone number.");
+                }
+            },
         },
         address: {
             type: DataTypes.STRING,
             allowNull: false,
+            customValidator(value) {
+                if (value == null) {
+                    throw new Error("Please provide contact address.");
+                }
+            },
         },
         address2: {
             type: DataTypes.STRING,
@@ -49,18 +79,29 @@ module.exports = function(sequelize, DataTypes) {
         city:{
             type: DataTypes.STRING,
             allowNull: false,
+            customValidator(value) {
+                if (value == null) {
+                    throw new Error("Please provide contact city.");
+                }
+            },
         },
         state: {
             type: DataTypes.STRING,
             allowNull: false,
+            customValidator(value) {
+                if (value == null) {
+                    throw new Error("Please provide contact state.");
+                }
+            },
         },
         zip: {
             type: DataTypes.INTEGER,
             allowNull: false,
-        },
-        state: {
-            type: DataTypes.STRING,
-            allowNull: false,
+            customValidator(value) {
+                if (value == null) {
+                    throw new Error("Please provide contact zip code.");
+                }
+            },
         },
         monday: {
             type: DataTypes.STRING,
@@ -93,10 +134,19 @@ module.exports = function(sequelize, DataTypes) {
         wait: {
             type: DataTypes.INTEGER,
             allowNull: true,
-            validate: {
-				max: 120,
-				min: 0,
-			},
+            // validate: {
+			// 	max: 120,
+			// 	min: 0,
+            // },
+            customValidator(value) {
+                if (value == null || value < 4) {
+                    throw new Error("Please provide a wait time of at least 5 minutes.");
+                }
+
+                if (value == null || value > 120) {
+                    throw new Error("Please provide a wait time of less than 2 hours.");
+                }
+            },
         },
         businessImages: {
 			type: DataTypes.STRING,
@@ -110,6 +160,7 @@ module.exports = function(sequelize, DataTypes) {
         },
         businessDescription: {
             type: DataTypes.STRING,
+            allowNull: true,
 			validate: {
 				customValidator(value) {
 					if (value == null || value.length < 10) {
