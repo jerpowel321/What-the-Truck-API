@@ -23,7 +23,7 @@ USE uuchh311d4jifwcx
 -- Truck Business Information: id, businessName, website, cuisine, menu, firstName, middleInitial, lastName, email, phone, address, address2, city, state, zip, monday, tuesday, wednesday, thursday, friday, saturday, sunday, wait, businessImages, businessDescription, approved, applicationOpen, createdAt, updatedAt
 
 -- Food Truck Business Information --
-
+-- save --
 -- Pick & Go Sandwiches --
 INSERT INTO Trucks (businessName, website, cuisine, menu, firstName, lastName, email, phone, address, city, state, zip, approved, applicationOpen, createdAt, updatedAt) VALUES ("Pick & Go Sandwiches", 'https://properfood.com/', 'American', 'https://properfood.com/menu/',  'James', 'Woods', 'jamesW@gmail.com', '4158493023', '116 Montgomery Street', 'San Francisco', 'CA', '941007', "true", "false" '2019-05-31 17:50:26', '2019-05-31 17:50:26');
 
